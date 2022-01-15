@@ -10,7 +10,7 @@ test('get account by id', async () => {
 
   const user = response.data;
 
-  expect(user.first_name).toBe('kaya');
+  expect(user.first_name).toBe('Kaya');
   // last_name
   // userpic.mdX2
 });

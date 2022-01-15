@@ -8,6 +8,6 @@ test('Kaya page works', async () => {
 
   const $ = cheerio.load(response.data);
   const actual = $('title').text();
-  expect(actual).toContain('with kaya edwards');
+  expect(actual).toContain('with Kaya Edwards');
   expect(actual).toContain('| OnClass');
 });
