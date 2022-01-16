@@ -9,6 +9,9 @@ test('get meeting by id', async () => {
   const meeting = response.data;
 
   // TODO expect(meeting.title).toBe(???);
+  expect(meeting.title).toBe('London is a capital of Great Britain');
   // TODO cover.mdX2.url
+  expect(meeting.cover.mdX2.url).toBeTruthy();
   // TODO subject.title
+  expect(meeting.subject.title).toContain('Geography');
 });

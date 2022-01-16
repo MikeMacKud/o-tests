@@ -14,7 +14,7 @@ test('Meeting page has meta', async () => {
   const title = $('title').text();
   
   // TODO проверить что там текст "London is a capital of Great Britain"
-  expect(title).toContain("London is a capital of Great Britain");
+  expect(title).toContain('London is a capital of Great Britain');
 
   // <meta name="description" content="Lorem ipsum dolor sit amet<...>">
   const description = $('meta[name="description"]').attr('content').toString().trim();
@@ -29,6 +29,8 @@ test('Meeting page has meta', async () => {
   // TODO const img = $('app-meeting-card img.cover-img').attr(???).toString().trim();
   const img = $('app-meeting-card img.cover-img').attr('src').toString().trim();
   // TODO проверить что там URL картинки
-  expect(img).toContain('.jpg');
+  expect(img).not.toBeNull();
+  expect(img.length).toBeGreaterThan(0);
+  expect(img).toContain('.jpg'); //если предполагаеться, что изображение в формате "jpg" 
   
 });
